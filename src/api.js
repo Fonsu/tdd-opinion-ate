@@ -7,7 +7,10 @@ const client = axios.create({
 
 const api = {
   loadRestaurants() {
-    return client.get('/restaurants').then(response => response.data);
+    return client
+      .get('/restaurants')
+      .then(response => response.data)
+      .catch(() => {});
   },
 };
 
