@@ -24,9 +24,9 @@ describe('RestaurantList', () => {
       renderWithProps();
     });
     it('does not display the error message', () => {
-          const {queryByText} = context;
-          expect(queryByText('Restaurants could not be loaded.')).toBeNull();
-        });
+      const {queryByText} = context;
+      expect(queryByText('Restaurants could not be loaded.')).toBeNull();
+    });
     it('does not display the loading indicator while not loading', () => {
       const {queryByTestId} = context;
       expect(queryByTestId('loading-indicator')).toBeNull();
