@@ -12,6 +12,9 @@ const api = {
       .then(response => response.data)
       .catch(() => {});
   },
+  createRestaurant(name) {
+    return client.post('/restaurants', {name}).then(response => response.data);
+  },
 };
 
 export default api;
